@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fixit-log</title>
+</head>
+<body>
+	<form action="form_script.php" method="POST">
+		<section id="identification"
+			<p>Case: <input type="text" name="case" size="7"/></p>
+			<p>Owner First Name: <input type="text" name="owner_first_name" size="15" /> </p>
+			<p>Owner Last Name: <input type="text" name="owner_last_name" size="20" /</p>
+			<p>Phone: <input type="text" name="phone" size= "10"/></p>
+			<p>Email: <input type="text" name="email" size= "30"/><p>
+		</section>
+
+		<section id="hardware">
+			<p>OS: <input type="text" name="os" size="15"</p>
+			<p>S/N: <input type="text" name="sn" size="20"</p>
+			<p>RAM: <input type="text" name="ram" size="10"</p>
+			<p>CPU: <input type="text" name="cpu" size="10"</p>
+			<p>Other equipment: <input type="text" name="equipment" size="50"</p>
+		
+		<section id="history">
+			<p>C/O: <input type="text" name="co" size="255"</p>
+			<p>Began: <input type="text" name="began" size="30"</p>
+			<p>Previous Work: <input type="radio" name="previous_work" value="yes"/>Yes
+			<input type="radio" name="previous_work" value="no"/> No
+			<input type="radio" name="previous_work" value"ukn"/> Unknown</p>
+			<p>Comments: <input type="text" name="comments" size="255"/></p>
+		</section>
+
+		<input type="submit" name="submit" value="Submit">
+	</form>
+</body>
+</html>
