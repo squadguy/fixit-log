@@ -9,10 +9,13 @@
 	$city=$_POST['city'];
 	$state=$_POST['state'];
 	$zip=$_POST['zip'];
-	$os=$_POST['os'];
+	$os_make=$_POST['os_make'];
+	$os_type=$_POST['os_type'];
+	$os_architecture=$_POST['os_architecture'];
 	$sn=$_POST['sn'];
 	$ram=$_POST['ram'];
-	$cpu=$_POST['cpu'];
+	$cpu_type=$_POST['cpu_type'];
+	$cpu_architecture=$_POST['cpu_architecture'];
 	$equipment=$_POST['equipment'];
 	$co=$_POST['co'];
 	$began=$_POST['began'];
