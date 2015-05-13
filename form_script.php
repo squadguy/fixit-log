@@ -1,5 +1,6 @@
 <?php
 	$case=$_POST['case'];
+	$date=$_POST['date'];
 	$owner_first_name=$_POST['owner_first_name'];
 	$owner_last_name=$_POST['owner_last_name'];
 	$phone=$_POST['phone'];
