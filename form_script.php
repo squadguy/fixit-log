@@ -4,6 +4,10 @@
 	$owner_last_name=$_POST['owner_last_name'];
 	$phone=$_POST['phone'];
 	$email=$_POST['email'];
+	$address=$_POST['address'];
+	$city=$_POST['city'];
+	$state=$_POST['state'];
+	$zip=$_POST['zip'];
 	$os=$_POST['os'];
 	$sn=$_POST['sn'];
 	$ram=$_POST['ram'];
