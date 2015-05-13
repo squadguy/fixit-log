@@ -20,6 +20,7 @@
 	$co=$_POST['co'];
 	$began=$_POST['began'];
 	$previous_work=$_POST['previous_work'];
+	$previous_who=$_POST['previous_who'];
 	$comments=$_POST['comments'];
 	$boot_time_intial=$_POST['boot_time_intial'];
 	$memory_use_intial=$_POST['memory_use_intial'];
