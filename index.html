@@ -8,7 +8,7 @@
 	<form action="form_script.php" method="POST">
 		<section id="identification"
 			<p>Case: <input type="text" name="case_id" size="7"/></p>
-			<p>Date: <input type="text" name="date" size="10" /</p>
+			<p>Date: <input type="text" name="day" size="15" /</p>
 			<p>Owner First Name: <input type="text" name="owner_first_name" size="15" /> </p>
 			<p>Owner Last Name: <input type="text" name="owner_last_name" size="20" /</p>
 			<p>Phone: <input type="text" name="phone" size= "10"/></p>
@@ -29,14 +29,15 @@
 				<input type="radio" name="os_architecture" value="64"/>64
 				<input type="radio" name="os_architecture" value="other"/>Other</p>
 			<p>S/N: <input type="text" name="sn" size="20"</p>
-			<p>RAM: <input type="text" name="ram" size="10"</p>
-			<p>CPU: <input type="radio" name="cpu_make" value="intel"/>Intel
+			<p>RAM: <input type="text" name="ram_amount" size="10"</p>
+			<p>CPU Make: <input type="radio" name="cpu_make" value="intel"/>Intel
 				<input type="radio" name="cpu_make" value="amd"/>AMD</p>
 				<input type="radio" name="cpu_make" value="other">Other</p> 
+			<p>CPU Model: <input type="text" name="cpu_model" size="0"/></p>
 			<p>CPU Architecture: <input type="radio" name="cpu_architecture" value="32"/>32
 				<input type="radio" name="cpu_architecture" value="64"/>64
 				<input type="radio" name="cpu_architecture" value="other"/>Other</p>
-			<p>Other equipment: <input type="text" name="equipment" size="50"</p>
+			<p>Other equipment: <input type="text" name="equipment_other" size="50"</p>
 		</section>
 		
 		<section id="history">
@@ -46,7 +47,8 @@
 				<input type="radio" name="previous_work" value="no"/> No
 				<input type="radio" name="previous_work" value="unknown"/> Unknown</p>
 			<p>Who?<input type="text" name="previous_who" size="20"/></p>
-			<p>Comments: <input type="text" name="comments" size="255"/></p>
+			<p>When?<input type="text" name="previous_when" size="20"/></p>
+			<p>Comments: <input type="text" name="comments_initial" size="255"/></p>
 		</section>
 
 		<section id="diagnostic">
