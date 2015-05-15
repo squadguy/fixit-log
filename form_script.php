@@ -52,10 +52,10 @@ $actions=$_POST['actions'];
 $summary=$_POST['summary'];
 $recommendations=$_POST['recommendations'];
 
-$sql = "INSERT INTO jobs (case_id, day, owner_first_name, owner_last_name, phone, address, city, state, zip, email os_make, os_type, os_architecture, sn, ram_amount, cpu_make, cpu_model, cpu_architecture, equipment_other, co, began, previous_work, previous_who, previous_when, comments_initial, boot_time_initial, memory_use_initial, cpu_use_initial, evaluation, overview, actions, summary, recommendations) " . " VALUES ('$case_id', '$day', '$owner_first_name', '$owner_last_name', '$phone', '$address', '$city', '$state', '$zip', '$email', '$os_make', '$os_type', '$os_architecture', '$sn', '$ram_amount', '$cpu_make', '$cpu_model', '$cpu_architecture', '$equipment_other', '$co', '$began', '$previous_work', '$previous_who', '$previous_when', '$comments_initial', '$boot_time_initial', '$memory_use_initial', '$cpu_use_initial', '$evaluation', '$overview', '$actions', '$summary', '$recommendations')";
+$sql = "INSERT INTO jobs (case_id, day, owner_first_name, owner_last_name, phone, address, city, state, zip, email, os_make, os_type, os_architecture, sn, ram_amount, cpu_make, cpu_model, cpu_architecture, equipment_other, co, began, previous_work, previous_who, previous_when, comments_initial, boot_time_initial, memory_use_initial, cpu_use_initial, evaluation, overview, actions, summary, recommendations) " . " VALUES ('$case_id', '$day', '$owner_first_name', '$owner_last_name', '$phone', '$address', '$city', '$state', '$zip', '$email', '$os_make', '$os_type', '$os_architecture', '$sn', '$ram_amount', '$cpu_make', '$cpu_model', '$cpu_architecture', '$equipment_other', '$co', '$began', '$previous_work', '$previous_who', '$previous_when', '$comments_initial', '$boot_time_initial', '$memory_use_initial', '$cpu_use_initial', '$evaluation', '$overview', '$actions', '$summary', '$recommendations')";
 
 if(!mysql_query($sql)) {
-	die('Error: ' . mysql_error())a;
+	die('Error: ' . mysql_error());
 }
 
 	mysql_close();	
