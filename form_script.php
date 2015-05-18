@@ -18,7 +18,14 @@ if (!$db_selected) {
 
 /*echo 'connected sucesfully';*/
 
-$case_id=$_POST['case_id'];
+$formItems = array('case_id','day','owner_first_name','owner_last_name','phone','email','address','city','state','zip','os_make','os_type','os_architecture','sn','ram_amount','cpu_make','cpu_model','cpu_architecture','equipment_other','co','began','previous_work','previous_who','previous_when','comments_initial','boot_time_initial','memory_use_initial','evaluation','overview','actions','summary','recommendations');
+
+foreach ($formItems as $formItem){
+	echo '$' . $formItem . '=' . '$_POST' . '[' . '\'' . $formItem . '\'' . ']; \n';
+}
+//Loop replaces list below
+
+/*$case_id=$_POST['case_id'];
 $day=$_POST['day'];
 $owner_first_name=$_POST['owner_first_name'];
 $owner_last_name=$_POST['owner_last_name'];
@@ -51,6 +58,7 @@ $overview=$_POST['overview'];
 $actions=$_POST['actions'];
 $summary=$_POST['summary'];
 $recommendations=$_POST['recommendations'];
+*/
 
 $sql = "INSERT INTO jobs (case_id, day, owner_first_name, owner_last_name, phone, address, city, state, zip, email, os_make, os_type, os_architecture, sn, ram_amount, cpu_make, cpu_model, cpu_architecture, equipment_other, co, began, previous_work, previous_who, previous_when, comments_initial, boot_time_initial, memory_use_initial, cpu_use_initial, evaluation, overview, actions, summary, recommendations) " . " VALUES ('$case_id', '$day', '$owner_first_name', '$owner_last_name', '$phone', '$address', '$city', '$state', '$zip', '$email', '$os_make', '$os_type', '$os_architecture', '$sn', '$ram_amount', '$cpu_make', '$cpu_model', '$cpu_architecture', '$equipment_other', '$co', '$began', '$previous_work', '$previous_who', '$previous_when', '$comments_initial', '$boot_time_initial', '$memory_use_initial', '$cpu_use_initial', '$evaluation', '$overview', '$actions', '$summary', '$recommendations')";
 
