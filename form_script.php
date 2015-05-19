@@ -4,16 +4,16 @@ define('DB_USER', 'squadguy');
 define('DB_PASSWORD', '1is4life');
 define('DB_HOST', '192.168.1.216');
 
-$link = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD);
+$link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
 
 if (!$link) {
-	die('Could not connect: ' . mysqli_error());
+	die('Could not connect: ' . mysql_error());
 }
 
-$db_selected = mysqli_select_db(DB_NAME, $link);
+$db_selected = mysql_select_db(DB_NAME, $link);
 
 if (!$db_selected) {
-	die('Can\'t use ' . DB_NAME . ': ' . mysqli_error());
+	die('Can\'t use ' . DB_NAME . ': ' . mysql_error());
 }
 
 /*echo 'connected sucesfully';*/
@@ -21,7 +21,7 @@ if (!$db_selected) {
 $formItems = array('case_id','day','owner_first_name','owner_last_name','phone','email','address','city','state','zip','os_make','os_type','os_architecture','sn','ram_amount','cpu_make','cpu_model','cpu_architecture','equipment_other','co','began','previous_work','previous_who','previous_when','comments_initial','boot_time_initial','memory_use_initial','evaluation','overview','actions','summary','recommendations');
 
 foreach ($formItems as $formItem){
-	$$formItem=mysqli_escape_string($_POST[$formItem]);
+	$formItem = mysql_escape_string($_POST[$formItem]);
 }
 //Loop replaces list below
 
@@ -62,9 +62,9 @@ $recommendations=$_POST['recommendations'];
 
 $sql = "INSERT INTO jobs (case_id, day, owner_first_name, owner_last_name, phone, address, city, state, zip, email, os_make, os_type, os_architecture, sn, ram_amount, cpu_make, cpu_model, cpu_architecture, equipment_other, co, began, previous_work, previous_who, previous_when, comments_initial, boot_time_initial, memory_use_initial, cpu_use_initial, evaluation, overview, actions, summary, recommendations) " . " VALUES ('$case_id', '$day', '$owner_first_name', '$owner_last_name', '$phone', '$address', '$city', '$state', '$zip', '$email', '$os_make', '$os_type', '$os_architecture', '$sn', '$ram_amount', '$cpu_make', '$cpu_model', '$cpu_architecture', '$equipment_other', '$co', '$began', '$previous_work', '$previous_who', '$previous_when', '$comments_initial', '$boot_time_initial', '$memory_use_initial', '$cpu_use_initial', '$evaluation', '$overview', '$actions', '$summary', '$recommendations')";
 
-if(!mysqli_query($sql)) {
-	die('Error: ' . mysqli_error());
+if(!mysql_query($sql)) {
+	die('Error: ' . mysql_error());
 }
 
-	mysqli_close($link);	
+	mysql_close();	
 ?>
